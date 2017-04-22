@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/header.ejs %>
+<div id="hero-image">
+    <h1 id="hero-title"><%= title %></h1>
+</div>
+
+<div id="posters-wrapper" class="content-padding clearfix">
+        <% movies.map((m)=>{%>
+            <div class="poster">
+            <img src ="/images/<%= m.poster %>" class="img-responsive">
+            </div>
+        <% }); %>
+</div>
+
+<% include partials/scripts.ejs %>
+</body>
+</html>
